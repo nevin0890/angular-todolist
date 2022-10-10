@@ -15,7 +15,12 @@
                      
                         <td>{{i.id}}</td>     
                         <td>{{i.title}} </td>
-                        <td>{{i.completed}}</td>
+                        <td *ngIf="i.completed"><div class="alert alert-success" role="alert">
+                             completed
+                        </div></td>
+                        <td *ngIf="! i.completed"><div class="alert alert-danger" role="alert">
+                           Not completed
+                        </div></td>
                     </tr>
                  
                 </tbody>
